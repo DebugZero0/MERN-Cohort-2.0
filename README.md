@@ -145,5 +145,8 @@ This repository will contain **all my assignments, exercises, and projects** fro
 
 ## 🖥️ Live Projects
 
-No projects found yet. 🚧
+| Module | Project | Live Demo | Repo Folder |
+|:-------:|:--------|:----------|:-------------|
+| HTML | Untitled Project | 🔗 [View Live](#) | [`./01_HTML_CSS`](./01_HTML_CSS) |
+
 ---
