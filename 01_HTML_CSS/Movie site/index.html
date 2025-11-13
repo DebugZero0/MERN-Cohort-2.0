@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie site</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div class="main">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="navbar">
+                <ul class="nav-bar">
+                    <li>Home</li>
+                    <li>Genre</li>
+                    <li>Movie</li>
+                    <li>WebSeries</li>
+                    <li>Tv Shows</li>
+                    <li>About</li>
+                    <li>Contact</li> 
+                    <div class="search-bar">
+                        <input id="search" type="search" placeholder="search...">
+                        <label for="search"><span><i class="ri-search-line" style="color: black;"></i></span> </label>
+                    </div> 
+                </ul>
+            </div>
+            <div class="cards">
+                <div class="box">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSpTHluFrgNRzM0P_SylJd_mca_zwN8absVVaVCTlGzOLwYcqwX" alt="pic">
+                    <h2>Ba****ds of bollywood</h2>
+                    <p>Released
+                        <button>Imdb:7.9</button>
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTc8wYeIv9qLpAFjUp5zG-apeBwOvpX0Uhhj6KlqImDvcn5rvfG" alt="pic">
+                    <h2>Alice in Borderland</h2>
+                    <p>Released: 2020
+                        <button>Imdb: 7.8</button>
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqZn20BgESHQl4KVxTNRT0E444uyU35NpnQBUHUlEvW-j4WNqE" alt="">
+                    <h2>Superman</h2>
+                    <p>Released: 2025 
+                        <button>Imdb: 7.1</button>
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Mahavatar_Narsimha_film_poster.jpg" alt="">
+                    <h2>Mahavatar Narsimha</h2>
+                    <p>Released: 2025 
+                        <button>Imdb: 8.8</button>
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDE1NjNmZjgtZTg0OC00NjkxLWEzYzItMDNkMTc3YjgxZWQyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="">
+                    <h2>Wednesday</h2>
+                    <p>Released: 2022 
+                        <button>Imdb: 8.0</button>
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjg2NmM0MTEtYWY2Yy00NmFlLTllNTMtMjVkZjEwMGVlNzdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="">
+                    <h2>Stranger Things</h2>
+                    <p>Released: 2016 
+                        <button>Imdb: 8.6</button>
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="https://i0.wp.com/indiacurrents.com/wp-content/uploads/2025/03/dragon-2025-movie-review.webp?fit=1200%2C900&ssl=1" alt="">
+                    <h2>Dragon</h2>
+                    <p>Released: 2025
+                        <button>Imdb: 7.8</button>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+  // Set --vh to 1% of the viewport height
+  function setVh() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  setVh();
+  window.addEventListener('resize', setVh);
+</script>
+</body>
+</html>
