@@ -146,6 +146,6 @@ This repository will contain **all my assignments, exercises, and projects** fro
 
 | Module | Project | Live Demo | Repo Folder |
 |:-------:|:--------|:----------|:-------------|
-| HTML CSS | iPhone Clone | 🔗 [View Live](https://cohort-2-0-self.vercel.app/) | [`./01_HTML_CSS/iPhone clone`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/iPhone clone) |
+| HTML CSS | iPhone Clone | 🔗 [View Live](https://cohort-2-0-self.vercel.app/) | [`./01_HTML_CSS/iPhone clone`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/iPhone%20clone) |
 
 ---
