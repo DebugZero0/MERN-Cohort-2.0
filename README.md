@@ -150,3 +150,13 @@ This repository will contain **all my assignments, exercises, and projects** fro
 | HTML CSS | Movie Site | 🔗 [View Live](https://cohort-2-0-vlh8.vercel.app/) | [`./01_HTML_CSS/Movie site`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/Movie%20site) |
 
 ---
+### <b>🌟 Support This Journey</b>
+
+<h3>If my learning journey has inspired or helped you, here’s how you can show some love and keep the momentum going:</h3>
+<ul>
+<li>⭐ Star this repo to show your support
+<li>🍴 Fork it and start your own awesome learning adventure
+<li>💬 Share your thoughts, ideas, or suggestions — feedback fuels growth
+<li>🤝 Connect for collaborations, projects, or just to exchange ideas
+<li>🚀 Every star, fork, and message means the world — let’s grow and learn together! 💡
+</ul>
