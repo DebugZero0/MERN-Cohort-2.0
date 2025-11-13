@@ -132,8 +132,7 @@ This repository will contain **all my assignments, exercises, and projects** fro
 📦 MERN-Cohort-2.0
  ┣ 📂 01_HTML-CSS
  ┃ ┣ 📜 README.md  ← Contains project descriptions + live links  
- ┃ ┣ 🧱 landing-page/
- ┃ ┗ 🌐 portfolio/
+ ┃ ┗ 🌐 Files/
  ┣ 📂 02_Tailwind
  ┣ 📂 03_JavaScript
  ┣ 📂 04_React
@@ -147,6 +146,10 @@ This repository will contain **all my assignments, exercises, and projects** fro
 
 | Module | Project | Live Demo | Repo Folder |
 |:-------:|:--------|:----------|:-------------|
-| HTML | Untitled Project | 🔗 [View Live](#) | [`./01_HTML_CSS`](./01_HTML_CSS) |
+| 🎨 HTML CSS | iphone clone | 🔗 [View Live](#) | [`./01_HTML_CSS/iPhone clone`](./01_HTML_CSS/iPhone clone) |
+
+📅 **Last Updated:** 13 Nov 2025, 8:39 pm
+-------:|:--------|:----------|:-------------|
+| HTML CSS | iphone clone | 🔗 [View Live](#) | [`./01_HTML_CSS/iPhone clone`](./01_HTML_CSS/iPhone clone) |
 
 ---
