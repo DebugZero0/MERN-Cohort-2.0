@@ -141,3 +141,9 @@ This repository will contain **all my assignments, exercises, and projects** fro
  ┣ 📂 06_MongoDB
  ┣ 📂 07_Deployment
  ┗ 📜 README.md
+
+## 🖥️ Live Projects
+
+…table generated here…
+
+---
