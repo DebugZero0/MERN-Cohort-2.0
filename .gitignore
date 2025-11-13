@@ -55,3 +55,6 @@ temp/
 # Optional: hide scripts or config files you don’t want public
 updateReadme.js
 scripts/
+
+.json
+

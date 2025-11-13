@@ -1,0 +1,24 @@
+{
+  "name": "mern-cohort-2.0",
+  "version": "1.0.0",
+  "description": "[![Course](https://img.shields.io/badge/Course-COHORT%202.0-blue.svg)](https://sheryians.notion.site/cohort-2?pvs=143)\r [![Tech Stack](https://img.shields.io/badge/Stack-MERN-green.svg)](https://github.com/DebugZero0)\r [![Status](https://img.shields.io/badge/Status-Learning-orange.svg)]()\r [![Profile](https://img.shields.io/badge/GitHub-DebugZero0-black.svg)](https://github.com/DebugZero0)",
+  "main": "index.js",
+  "scripts": {
+    "update": "node .scripts/updateReadme.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DebugZero0/MERN-Cohort-2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DebugZero0/MERN-Cohort-2.0/issues"
+  },
+  "homepage": "https://github.com/DebugZero0/MERN-Cohort-2.0#readme",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "fs-extra": "^11.3.2"
+  }
+}
