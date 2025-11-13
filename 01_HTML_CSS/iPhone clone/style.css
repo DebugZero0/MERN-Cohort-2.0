@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'Remixicon';
+    src: url(./sf-pro-text_medium.woff2);
+}
+@font-face {
+    font-family: 'text';
+    src: url(./sf-pro-text_regular.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'text';
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 8px 0;
+    font-size: 15px;
+}
+h4{
+    font-weight: 100; 
+}
+.video video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.video img{
+    display: none;
+}
+.video2{
+    height: 700px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+.video2 video{
+    transform: rotate(90deg);
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+}
+.text{
+    position: absolute;
+    bottom: 60px; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* space between text and button */
+}
+.text button{ 
+    position: static; /* allow gap to take effect */
+    transform: none;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+}
+.text button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+.separator {
+    height: 12px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+
+.iphone-air-section {
+    background-image: url('https://www.apple.com/v/home/ch/images/heroes/iphone-air/hero_iphone_air__0gxyavihpiqu_mediumtall_2x.jpg');
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fbfbfd;
+}
+
+.iphone-air-section h2 {
+    text-align: center;
+    color: #1d1d1f;
+    padding-top: 100px;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.iphone-air-section .tagline {
+    text-align: center;
+    color: #1d1d1f;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.iphone-17-section {
+    background-image: url('https://www.apple.com/v/home/ch/images/heroes/iphone-17/hero_iphone_17__c5vvimu9a20y_mediumtall_2x.jpg');
+    height: 750px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f7;
+}
+
+.iphone-17-section h2 {
+    text-align: center;
+    color: #1d1d1f;
+    padding-top: 100px;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.iphone-17-section .tagline {
+    text-align: center;
+    color: #1d1d1f;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.two-column-wrapper {
+    display: flex;
+    gap: 12px;
+    padding: 0 12px;
+}
+
+.column {
+    flex: 1;
+    height: 580px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.watch-section {
+    background-image: url('https://www.apple.com/v/home/ch/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_medium_2x.jpg');
+    background-color: #f5f5f7;
+}
+
+.airpods-section {
+    background-image: url('https://www.apple.com/v/home/ch/images/promos/airpods-pro-3/promo_airpodspro_3__f6xmza7bglei_medium_2x.jpg');
+    background-color: #f5f5f7;
+}
+
+.macbook-section {
+    background-image: url('https://www.apple.com/v/home/ch/images/promos/macbook-air/promo_macbook_air__fqowrtnxewqe_medium_2x.jpg');
+    background-color: #d4e8f3;
+}
+
+.ipad-air-section {
+    background-image: url('https://www.apple.com/v/home/ch/images/promos/ipad-air/promo_ipad_air_avail__6i02t7nujr62_medium_2x.jpg');
+    background-color: #d4e8f3;
+}
+
+.tradein-section {
+    background-image: url('https://www.apple.com/v/home/ch/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_medium_2x.jpg');
+    background-color: #f5f5f7;
+}
+
+.apple-card-section {
+    background-image: url('https://www.apple.com/v/home/ch/images/promos/apple-card/promo_apple_card__5cm7draujpey_medium_2x.jpg');
+    background-color: #f5f5f7;
+}
+
+.column h2 {
+    text-align: center;
+    color: #1d1d1f;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.column h2 i {
+    font-size: 42px;
+    margin-right: 5px;
+}
+
+.column .tagline {
+    text-align: center;
+    color: #1d1d1f;
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.watch-logo {
+    width: 220px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.ipad-logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tradein-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.apple-card-logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.learn-more,
+.buy {
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.learn-more {
+    background-color: #0071e3;
+    color: #fff;
+    border: none;
+}
+
+.learn-more:hover {
+    background-color: #0077ed;
+}
+
+.buy {
+    background-color: transparent;
+    color: #0071e3;
+    border: 1px solid #0071e3;
+}
+
+.buy:hover {
+    background-color: #0071e3;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .text{
+        width: 100vw;
+        padding: 10px;
+        bottom: 0; 
+    }
+    .nav h4, .video video {
+        display: none;
+    }
+    .video img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .video .text h4,h3{
+        color: white;
+    }
+
+    .column {
+        height: 400px;
+        padding: 0 12px;
+    }
+
+    .two-column-wrapper {
+        flex-direction: column;
+    }
+
+    .video2 video {
+        overflow: hidden;
+        transform: rotate(0deg); 
+        width: 100vw; 
+        object-fit: contain;
+    }
+
+    .iphone-air-section {
+        background-image: none;
+        height: 500px;
+
+    }
+    .iphone-17-section {
+        
+        height: 500px;
+
+    }
+
+}
