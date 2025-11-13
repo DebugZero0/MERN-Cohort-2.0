@@ -144,6 +144,5 @@ This repository will contain **all my assignments, exercises, and projects** fro
 
 ## 🖥️ Live Projects
 
-…table generated here…
-
+No projects found yet. 🚧
 ---
