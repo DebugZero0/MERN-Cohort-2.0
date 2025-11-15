@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+.no-scrollbar {
+-ms-overflow-style: none; /* IE and Edge */
+scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+display: none; /* Chrome, Safari, Opera */
+}
+
+@theme {
+  --animate-scroll: scroll 5s linear infinite;
+
+  @keyframes scroll {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-800%); }
+  }
+}
+
+body #card-container #card:hover {
+  animation: var(--animate-scroll);
+  transform: scale(1.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  h1 , h2 , p {
+    color: white;
+  }
+}

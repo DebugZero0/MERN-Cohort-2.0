@@ -148,6 +148,8 @@ This repository will contain **all my assignments, exercises, and projects** fro
 |:-------:|:--------|:----------|:-------------|:--------------|
 | HTML CSS | iPhone Clone | 🔗 [View Live](https://cohort-2-0-self.vercel.app/) | [`./01_HTML_CSS/iPhone clone`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/iPhone%20clone) | 13/11/2025 |
 | HTML CSS | Movie Site | 🔗 [View Live](https://cohort-2-0-vlh8.vercel.app/) | [`./01_HTML_CSS/Movie site`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/Movie%20site) | 13/11/2025 |
+| Tailwind | Crauser | 🔗 [View Live](https://crauser.vercel.app/) | [`./02_Tailwind/Infinite crauser`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/02_Tailwind/Infinite%20crauser) | 15/11/2025 |
+
 
 ---
 ### <b>🌟 Support This Journey</b>
