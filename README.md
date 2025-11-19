@@ -142,6 +142,8 @@ This repository will contain **all my assignments, exercises, and projects** fro
  ┗ 📜 README.md
 ```
 
+<!-- LIVE_PROJECTS_START -->
+
 ## 🖥️ Live Projects
 
 | Module | Project | Live Demo | Repo Folder | Last Updated |
@@ -149,9 +151,10 @@ This repository will contain **all my assignments, exercises, and projects** fro
 | HTML CSS | iPhone Clone | 🔗 [View Live](https://cohort-2-0-self.vercel.app/) | [`./01_HTML_CSS/iPhone clone`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/iPhone%20clone) | 13/11/2025 |
 | HTML CSS | Movie Site | 🔗 [View Live](https://cohort-2-0-vlh8.vercel.app/) | [`./01_HTML_CSS/Movie site`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/Movie%20site) | 13/11/2025 |
 | Tailwind | Crauser | 🔗 [View Live](https://crauser.vercel.app/) | [`./02_Tailwind/Infinite crauser`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/02_Tailwind/Infinite%20crauser) | 15/11/2025 |
+| JavaScript | EyeTracker.js | 🔗 [View Live](https://mern-cohort-2-0.vercel.app/) | [`./03_JavaScript/Eye`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/03_JavaScript/Eye) | 20/11/2025 |
 
+<!-- LIVE_PROJECTS_END -->
 
----
 ### <b>🌟 Support This Journey</b>
 
 <h3>If my learning journey has inspired or helped you, here’s how you can show some love and keep the momentum going:</h3>
