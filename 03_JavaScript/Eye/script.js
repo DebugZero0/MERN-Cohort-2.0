@@ -3,8 +3,8 @@ const circles = document.querySelectorAll(".big");
     circles.forEach((big, index) => {
         const small = big.querySelector(".small");
 
-        const bigRadius = 15;
-        const smallRadius = 2;
+        const bigRadius = 150;
+        const smallRadius = 20;
 
         let targetX = bigRadius - smallRadius;
         let targetY = bigRadius - smallRadius;
@@ -36,8 +36,8 @@ const circles = document.querySelectorAll(".big");
             currentX += (targetX - currentX) * 0.1;
             currentY += (targetY - currentY) * 0.1;
 
-            small.style.left = currentX + "vmin"; 
-            small.style.top = currentY + "vmin";
+            small.style.left = currentX + "px"; 
+            small.style.top = currentY + "px";
 
             requestAnimationFrame(animate);
         }

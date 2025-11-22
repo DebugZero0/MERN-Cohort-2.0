@@ -10,8 +10,8 @@ body {
     }
 
     .big {
-        width: 30vmin;
-        height: 30vmin;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
         position: relative;
         background: radial-gradient(circle, rgba(0,255,255,0.15), rgba(0,0,0,0.3));
@@ -20,8 +20,8 @@ body {
     }
 
     .small {
-        width: 4vmin;
-        height: 4vmin;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         position: absolute;
         background: #00ffff;
