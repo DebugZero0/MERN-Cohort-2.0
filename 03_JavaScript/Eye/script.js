@@ -12,7 +12,7 @@ const circles = document.querySelectorAll(".big");
         let currentX = targetX;
         let currentY = targetY;
 
-        document.addEventListener("pointermove", (e) => {
+        document.addEventListener("mousemove", (e) => {
             const rect = big.getBoundingClientRect();
             const centerX = rect.left + bigRadius;
             const centerY = rect.top + bigRadius;
