@@ -51,13 +51,13 @@ No frameworks. No libraries. Just clean JS 🔥
 
 ## ⚙️ How It Works
 
-- 1. User enters a city name
-- 2. App fetches:
+- User enters a city name
+- App fetches:
    - **Current weather**
    - **5-day forecast**
-- 3. Data is parsed and displayed dynamically
-- 4. Weather icons change based on condition codes
-- 5. UI updates without page reload
+- Data is parsed and displayed dynamically
+- Weather icons change based on condition codes
+- UI updates without page reload
 
 
 
