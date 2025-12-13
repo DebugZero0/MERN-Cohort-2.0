@@ -152,6 +152,7 @@ This repository will contain **all my assignments, exercises, and projects** fro
 | HTML CSS | Movie Site | 🔗 [View Live](https://cohort-2-0-vlh8.vercel.app/) | [`./01_HTML_CSS/Movie site`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/01_HTML_CSS/Movie%20site) | 13/11/2025 |
 | Tailwind | Crauser | 🔗 [View Live](https://crauser.vercel.app/) | [`./02_Tailwind/Infinite crauser`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/02_Tailwind/Infinite%20crauser) | 15/11/2025 |
 | JavaScript | EyeTracker.js | 🔗 [View Live](https://mern-cohort-2-0.vercel.app/) | [`./03_JavaScript/Eye`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/03_JavaScript/Eye) | 20/11/2025 |
+| Advance JS | Weatherwise | 🔗 [View Live](https://mern-cohort-2-0-vi8p.vercel.app/) | [`./04_Advance_JS/Weather DashBoard`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/04_Advance_JS/Weather%20DashBoard) | 13/12/2025 |
 
 <!-- LIVE_PROJECTS_END -->
 

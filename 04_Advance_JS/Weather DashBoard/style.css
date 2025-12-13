@@ -15,8 +15,10 @@ body {
     background-size: cover;
     background-position: center;
     display:flex;
+    flex-direction: column;
     justify-content:center;
     align-items:center;
+    gap: 30px;
 }
 body::before{
     content: "";
@@ -167,9 +169,8 @@ body::before{
     width: fit-content;
 }
 .watermark{
-    position: absolute;
-    bottom: 100px;
-    font-size: 12px;
+
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.5);
     z-index: 1;
 }
