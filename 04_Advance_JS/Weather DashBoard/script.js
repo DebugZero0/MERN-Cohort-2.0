@@ -130,3 +130,73 @@ function showDisplaySection(section){
     section.style.display = 'flex';
 }
 
+// Suggestion 
+
+const input = document.getElementById("search");
+const suggestionsBox = document.getElementById("suggestions");
+
+let debounceTimer;
+
+// Debounce function
+function debounce(fn, delay = 400) {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(fn, delay);
+}
+
+// Fetch cities
+async function fetchCities(query) {
+  const url = `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?namePrefix=${query}&limit=5&types=CITY`;
+  const key2= window.city_api || '';
+  const response = await fetch(url, {
+    headers: {
+      "X-RapidAPI-Key": key2, 
+      "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com" 
+    }
+  });
+
+  const data = await response.json();
+  return data.data;
+}
+
+// Render suggestions
+function renderSuggestions(cities) {
+  suggestionsBox.innerHTML = "";
+
+  cities.forEach(city => {
+    const div = document.createElement("div");
+    div.className = "suggestion";
+    div.textContent = `${city.city}, ${city.country}`;
+    suggestionsBox.appendChild(div);
+  });
+}
+
+// Input event
+input.addEventListener("input", () => {
+  const query = input.value.trim();
+
+  if (query.length === 0) {
+    suggestionsBox.innerHTML = "";
+    return;
+  }
+
+  debounce(async () => {
+    const cities = await fetchCities(query);
+    renderSuggestions(cities);
+  });
+});
+
+// Select city
+suggestionsBox.addEventListener("click", e => {
+  if (e.target.classList.contains("suggestion")) {
+    input.value = e.target.textContent;
+    suggestionsBox.innerHTML = "";
+  }
+});
+
+// Click outside → close dropdown
+document.addEventListener("click", e => {
+  if (!e.target.closest(".container")) {
+    suggestionsBox.innerHTML = "";
+  }
+});
+

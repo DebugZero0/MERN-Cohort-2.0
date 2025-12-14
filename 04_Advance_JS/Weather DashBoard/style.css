@@ -11,7 +11,7 @@ html,
 body {
     height: 100dvh;
     width: 100%;
-    background: url('./assets/bg2.jpg');
+    background: url('./assets/bg.jpg');
     background-size: cover;
     background-position: center;
     display:flex;
@@ -19,6 +19,7 @@ body {
     justify-content:center;
     align-items:center;
     gap: 30px;
+    position: fixed;
 }
 body::before{
     content: "";
@@ -192,4 +193,31 @@ i:hover{
     color: white;
     cursor: pointer;
 }
+/* suggestion */
 
+#suggestions {
+  position: absolute;
+  width: 100%; 
+  top: 100 dpx;
+  left: 0;
+  border-radius:10px 10px 30px 30px;
+  background: black;
+  backdrop-filter: blur(500px);
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+#suggestions::-webkit-scrollbar{
+    display: none;
+}
+
+.suggestion:hover {
+  background: #f0f0f040;
+}
