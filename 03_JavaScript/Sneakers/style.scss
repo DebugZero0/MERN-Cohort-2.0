@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@font-face {
+    font-family: "Big Text";
+    src: url("./MangoGrotesque-Medium.otf");
+}
+@font-face {
+    font-family: "text";
+    src: url("./Inter-Medium.ttf");
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    .logo {
+        @include center-flex;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .navbar {
+        @include center-flex;
+        font-family: "text";
+        font-size: 1.2rem;
+        font-weight: bold;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+    }
+
+    .search {
+        @include center-flex;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        .cart {
+            @include center-flex;
+            height: 70%;
+            width: 40%;
+            border-radius: 60px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid black;
+            margin-left: 30%;
+
+            .back {
+                @include center-flex;
+                height: 35px;
+                width: 40px;
+                margin-right: 10px;
+                border-radius: 60px;
+                background-color: black;
+            }
+        }
+    }
+}
+
+main {
+    height: 65vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: .5fr 4.5fr .7fr 2fr;
+
+    .text {
+        @include center-flex;
+        font-family: "text";
+        font-size: 2rem;
+        height: 100%;
+        width: 100%;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        // background-color: lightgray;
+    }
+
+    .info {
+        height: 100%;
+        width: 75%;
+        padding-left: 30px;
+
+        h1 {
+            font-size: 5rem;
+            font-weight: bold;
+            width: 70%;
+            padding-top: 30%;
+            // background-color: brown;
+        }
+
+        .stars {
+            height: 10%;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 3px;
+
+            i {
+                font-size: 2rem;
+                color: rgb(255, 217, 0);
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .colors {
+        height: 100%;
+        width: 70%;
+        @include center-flex;
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 20px;
+
+        p {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 1.2rem;
+        }
+
+        .color {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .circle {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                border: 2px solid black;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .size{
+        @include center-flex;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        p {
+            display: flex;
+            align-items: flex-end;
+            padding: auto;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 1.2rem;
+        }
+        .size-box {
+            @include center-flex;
+            flex-direction: column;
+            gap: 40px;
+            height: 100%;
+            width: 80%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: bold;
+            .ms{
+                @include center-flex;
+                font-family: 'Big Text';
+                height: 40px;
+                width: 40px;
+                padding: 10px;
+                font-size: 1.2rem;
+                font-weight: normal;
+                background-color: rgb(40, 40, 40);
+                color: white;
+                border-radius: 10px;
+                margin-left: 5px;
+                transition: all .5s ease;
+            }
+        }
+
+    }
+}
+.design{
+    position: absolute;
+    height: 700px;
+    width: 600px;
+    background-color: lightgray;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: -5;
+    clip-path: path('M 0,0 L 0,500 A 300,200,0,0,0 300,700 A 300,200,0,0,0 600,500 L 600,0 L 0,0 Z'); 
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+}
+.shoe{
+    position: absolute;
+    height: 400px;
+    width: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.shoe.pop {
+    transform: scale(0.7);
+}
+footer{
+    height: 25vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    padding-left: 3%;
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        color: darkslategray;
+        h1{
+            font-family: 'Big Text';
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        height: 170px;
+        width: 170px;
+        border-radius: 20px;
+        background-color: white;
+        border: 1.5px solid black;
+        .of{
+            @include center-flex;
+            font-family: 'text';
+            position: relative;
+            height: 100px;
+            width: 100px;
+            top: -20px;
+
+            background-color: black;
+            border-radius: 50%;
+            color: white;
+        }
+
+    }
+    .price{
+        margin-right: 3%;
+        display: grid;
+        align-items: center;
+        justify-items: flex-end;
+        grid-template-rows: 1fr 1fr;
+        font-family: 'text';
+        font-size: 2rem;
+        font-weight: bold;
+        height: 80%;
+        width: 50%;
+        margin: 0 auto;
+
+
+        h2{
+            text-decoration: line-through;
+            color: rgb(255, 217, 0);
+        }
+        .tab{
+            @include center-flex;
+            gap: 10px;
+            padding: 10px;
+            height: 50px;
+            width: 150px;
+            background-color: black;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 30px;
+
+            &:hover{
+                background-color: darkgray;
+                color: black;
+            }
+        }
+    }
+}
