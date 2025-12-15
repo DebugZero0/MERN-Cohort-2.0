@@ -190,6 +190,9 @@ suggestionsBox.addEventListener("click", e => {
   if (e.target.classList.contains("suggestion")) {
     input.value = e.target.textContent;
     suggestionsBox.innerHTML = "";
+    updateWeatherInfo(cityInput.value.trim()); 
+        cityInput.value = '';
+        cityInput.blur();
   }
 });
 
