@@ -221,3 +221,8 @@ i:hover{
 .suggestion:hover {
   background: #f0f0f040;
 }
+@media (max-width:500px) {
+    .socials{
+        display: none;
+    }
+}
