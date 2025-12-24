@@ -1,0 +1,644 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #222327;
+    --nav-color: #fff;
+    --active-color: #ff9900;
+    --active-hover-color: #ff7700;
+    /* Orange/Yellow from video */
+    --indicator-color: #29fd53;
+    /* Bright green or customizable */
+}
+
+body {
+    display: grid;
+    grid-template-columns: 15vw 1fr;
+    height: 100dvh;
+    background: var(--bg-color);
+}
+
+/* Navbar styling */
+.anchor {
+    background-color: orange;
+    border-radius: 20px;
+    position: absolute;
+    pointer-events: none;
+    /* So that it doesn't block hover */
+    position-anchor: --some_anchor;
+    top: anchor(top);
+    left: anchor(left);
+    bottom: anchor(bottom);
+    right: anchor(right);
+    transition: all 0.15s linear;  
+    /* mix-blend-mode: exclusion; */
+}
+
+.navigation {
+    height: 100dvh;
+    width: 100%;
+    background: var(--nav-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+    flex-direction: column;
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.navigation ul {
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    /* IMPORTANT */
+}
+
+.navigation ul button {
+    all: unset;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: stretch;
+    height: 70px;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+    gap: 50px;
+    padding-left: 15%;
+}
+
+.navigation ul button:hover {
+    transition: all 0.1s linear;
+    color: #fff;
+    anchor-name: --some_anchor;
+}
+
+.navigation ul li.active .text {
+    color: #CC561E;
+}
+
+/* content */
+.main-content {
+    /* padding: 20px; */
+    /* padding-bottom: 100px; */
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.page {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--nav-color);
+}
+
+.home-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.weather-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Guide section styling */
+.guide {
+    /* position: absolute; */
+
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: var(--nav-color);
+    max-width: auto;
+    font-size: 4vmax;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Todo-list section styling  */
+
+section .parent {
+    display: flex;
+    gap: 20px;
+    height: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+}
+
+.parent::-webkit-scrollbar {
+    display: none;
+}
+
+.child {
+    background: rgba(255, 255, 255, 0.1);
+    flex: 1 1 300px;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding: 10px;
+    overflow: auto;
+}
+
+.child::-webkit-scrollbar {
+    display: none;
+}
+
+:nth-child(1) .child form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+:nth-child(1) .child form button {
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: var(--active-color);
+    color: var(--nav-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+:nth-child(1) .child form button:hover {
+    background-color: var(--active-hover-color);
+}
+
+:nth-child(1) .child form button:active {
+    transform: scale(0.98);
+}
+
+:nth-child(1) .child form input,
+:nth-child(1) .child form textarea {
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+/* 🔴 Input validation error */
+.input-error {
+    box-shadow: 0 0 0 3px #ff4d4d;
+    animation: shake 0.25s;
+}
+/* Shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+:nth-child(2) .child{
+    anchor-name: --info_anchor;
+}
+
+:nth-child(1) .child form textarea {
+    width: 100%;
+    height: 350px;
+    resize: none;
+}
+
+:nth-child(2) .child .tasks {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+:nth-child(2) .child .tasks button {
+    outline: none;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+:nth-child(2) .child .tasks .btn{
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.complete-btn,
+.done-btn,
+.info-btn {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.complete-btn:active,
+.done-btn:active,
+.info-btn:active {
+    transform: scale(0.98);
+}
+
+.complete-btn span,
+.done-btn span,
+.info-btn span {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: small;
+  color: rgba(255, 255, 255, 0.61);
+  border-radius: 10px;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.complete-btn:hover span,
+.done-btn:hover span,
+.info-btn:hover span {
+  display: inline;
+}
+
+.tasks h5.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+
+:nth-child(2) .child .tasks .done-btn:hover i{
+    color: green;
+}
+:nth-child(2) .child .tasks .complete-btn:hover i{
+    color: red;
+}
+:nth-child(2) .child .tasks .info-btn:hover i{
+    color: blue;
+}
+
+.main-content h1 {
+    font-size: 4vmax;
+    margin-bottom: 10px;
+}
+
+.information-box {
+    background: var(--active-color);
+    padding: 15px 30px;
+    position: absolute;
+    border-radius: 10px;
+    height: 50%;
+    width: 50%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+    z-index: 10;
+    color: var(--nav-color);
+    font-size: 2vmax;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.15s linear;
+}   
+
+.information-box .info-content{
+    height: calc(100% - 30px);
+    width: calc(100% - 60px);
+    overflow-y: auto;
+    position: absolute;
+    top: 15px;
+}
+.information-box .info-content::-webkit-scrollbar {
+    display: none;
+}
+.ri-close-line{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 3vmax;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.blur{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    z-index: 5;
+    transition: all 0.15s linear;
+}
+
+/* Daily planner styling */
+
+.daily-planner {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    gap: 15px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.daily-planner::-webkit-scrollbar {
+    display: none;
+}
+.daily-planner .daily-planner-time {
+    display: flex;
+    position: relative;
+    flex: 1 1 400px;
+}
+.daily-planner .daily-planner-time p{
+    top: 0;
+    left: 2%;
+    position: absolute;
+    font-size: 0.9rem;
+}
+
+.daily-planner .daily-planner-time input{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 15px;
+    padding-left: 55px;
+    border-radius: 10px; 
+    font-size: 1.2rem;
+    width: 100%; 
+}
+
+
+
+/* Responsive Design for Mobile Devices */
+@media (max-width:500px) {
+
+    body {
+        height: 100dvh;
+        background: var(--bg-color);
+    }
+
+    .anchor {
+        display: none;
+    }
+
+    .navigation {
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        width: 100vw;
+        height: 70px;
+        background: var(--nav-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .navigation ul {
+        display: flex;
+        width: 350px;
+    }
+
+    .navigation ul li {
+
+        position: relative;
+        list-style: none;
+        width: 70px;
+        height: 70px;
+        z-index: 2;
+        /* IMPORTANT */
+    }
+
+    .navigation ul li button {
+        all: unset;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    /* Icon */
+    .navigation ul li button .icon {
+        position: relative;
+        display: block;
+        line-height: 75px;
+        font-size: 1.5em;
+        transition: 0.5s;
+        color: var(--bg-color);
+        z-index: 3;
+    }
+
+    /* Active animation */
+    .navigation ul li.active button .icon {
+        transform: translateY(-32px);
+        color: var(--nav-color);
+    }
+
+    /* Text */
+    .navigation ul li button .text {
+        color: var(--bg-color);
+        position: absolute;
+        font-size: 0.75em;
+        letter-spacing: 0.05em;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.5s;
+    }
+
+    .navigation ul li.active button .text {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+
+    .navigation,
+    .navigation * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .navigation ul li button {
+        touch-action: manipulation;
+    }
+
+
+    /* The "Gooey" / Sliding Indicator Circle */
+    .indicator {
+        position: absolute;
+        /* top: -50%; */
+        width: 70px;
+        height: 70px;
+        background: var(--active-color);
+        /* Matches the active icon color */
+        border-radius: 50%;
+        border: 6px solid var(--bg-color);
+        /* Creates the 'cutout' look */
+        transition: 0.5s linear;
+
+
+        top: -35px;
+        /* 🔥 Move it UP (adjustable) */
+        left: 0;
+        width: 70px;
+        height: 70px;
+        background: var(--active-color);
+        border-radius: 50%;
+        border: 6px solid var(--bg-color);
+        transition: 0.5s;
+        z-index: 1;
+        /* BELOW icons */
+    }
+
+    /* Corrects the curve around the circle to make it look "gooey" or integrated */
+    .indicator::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -22px;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-top-right-radius: 20px;
+        box-shadow: 1px -10px 0 0 var(--bg-color);
+        box-shadow: transparent;
+        /* Curve fix left */
+    }
+
+    .indicator::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -22px;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-top-left-radius: 20px;
+        box-shadow: -1px -10px 0 0 var(--bg-color);
+        box-shadow: transparent;
+        /* Curve fix right */
+    }
+
+    .main-content {
+        position: fixed;
+        min-height: calc(100% - 70px);
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .main-content h1 {
+        font-size: 7vmax;
+        margin-bottom: 10px;
+    }
+
+    section .parent {
+        position: absolute;
+        width: calc(100% - 40px);
+        bottom: 10px;
+        height: calc(100% - 30vmax);
+    }
+
+    section .parent .child {
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    :nth-child(1) .child form textarea {
+        width: 100%;
+        height: 200px;
+        resize: none;
+    }
+
+
+    :nth-child(2) .child .tasks {
+        padding: 20px 20px;
+    }
+
+    :nth-child(2) .child .tasks button {
+        padding: 10px 10px;
+        border-radius: 20px;
+    }
+
+    /* Prevent text selection on child elements and buttons */
+    .child,
+    .child * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .child button {
+        touch-action: manipulation;
+    }
+    .information-box{
+        width: 90vw;
+        height: 50vmax;
+    }
+
+    .daily-planner {
+        height: 70vmax;
+        margin-bottom: 10px;
+    }
+}
+

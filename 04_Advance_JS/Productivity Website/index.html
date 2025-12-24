@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Menu Animation</title>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="navigation">
+        <div class="anchor"></div>
+        <ul>
+            <li class="list active">
+                <button type="button">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Home</span>
+                </button>
+            </li>
+
+            <li class="list">
+                <button type="button">
+                    <span class="icon"><i class="ri-cloud-line"></i></span>
+                    <span class="text">Weather</span>
+                </button>
+            </li>
+
+            <li class="list">
+                <button type="button">
+                    <span class="icon"><i class="ri-todo-line"></i></ion-icon></span>
+                    <span class="text">To-do-list</span>
+                </button>
+            </li>
+
+            <li class="list">
+                <button type="button">
+                    <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                    <span class="text">Planner</span>
+                </button>
+            </li>
+
+            <li class="list">
+                <button type="button">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="text">Profile</span>
+                </button>
+            </li>
+
+            <div class="indicator"></div>
+        </ul>
+    </div>
+    <main class="main-content">
+        <section id="home" class="page active">
+            <div class="guide">
+                <p>
+                    This is the home page for the Productivity App.
+                </p>
+            </div>
+        </section>
+
+        <section id="weather" class="page">
+            <iframe src="https://mern-cohort-2-0-vi8p.vercel.app/" class="home-frame" frameborder="0">
+            </iframe>
+        </section>
+
+        <section id="to-do-list" class="page">
+            <div class="blur"></div>
+            <div class="information-box">  
+            </div>
+            <h1>Your personalised task list</h1>
+            <div class="parent">
+                <div class="child">
+                    <form>
+                        <input type="text" id="taskInput" placeholder="Enter a new task">
+                        <textarea name="taskDescription" id="taskDescription"
+                            placeholder="Enter task description"></textarea>
+                        <button type="submit" id="addTaskButton">Add Task</button>
+                    </form>
+                </div>
+                <div class="child">
+                    <!-- <div class="tasks">
+                        <h5>Gym Session</h5>
+                        <button>Mark as completed</button>
+                    </div> -->
+                </div>
+            </div>
+
+        </section>
+
+        <section id="daily-planner" class="page">
+            <h1>Plan your day</h1>
+            <div class="daily-planner">
+                <!-- <div class="daily-planner-time">
+                    <p>6:00 am</p>
+                    <input type="text" placeholder="...">
+                </div> -->
+            </div>
+        </section>
+
+        <section id="profile" class="page">
+            <h1>Profile</h1>
+            <p>This is profile content</p>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
