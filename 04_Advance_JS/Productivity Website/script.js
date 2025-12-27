@@ -234,20 +234,18 @@ function shouldFetchNewQuote() {
 }
 
 async function fetchQuotes() {
-  try {
-    // ✅ call your Vercel serverless function
-    const response = await fetch("/api/quote");
-    const data = await response.json();
+  let response = await fetch("https://api.api-ninjas.com/v1/quotes", {
+    headers: {
+      "X-Api-Key": "Br95/EFqd2ny8Vs6iseKGg==yGULRvHgRVbhAyZr",
+    },
+  });
 
-    const quote = data[0];
+  const data = await response.json();
 
-    localStorage.setItem("dailyQuote", JSON.stringify(quote));
-    localStorage.setItem("quoteTime", Date.now());
+  localStorage.setItem("dailyQuote", JSON.stringify(data[0]));
+  localStorage.setItem("quoteTime", Date.now());
 
-    displayQuote(quote);
-  } catch (err) {
-    console.error("Failed to fetch quote", err);
-  }
+  displayQuote(data[0]);
 }
 
 function displayQuote(data) {
@@ -265,3 +263,4 @@ function displayQuote(data) {
     fetchQuotes(); // network only when needed
   }
 })();
+
