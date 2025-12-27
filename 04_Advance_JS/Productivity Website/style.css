@@ -34,7 +34,7 @@ body {
     left: anchor(left);
     bottom: anchor(bottom);
     right: anchor(right);
-    transition: all 0.15s linear;  
+    transition: all 0.15s linear;
     /* mix-blend-mode: exclusion; */
 }
 
@@ -140,15 +140,31 @@ section {
 
 /* Guide section styling */
 .guide {
-    /* position: absolute; */
-
+    position: relative;
     background: rgba(255, 255, 255, 0.1);
     padding: 15px 20px;
     border-radius: 10px;
     color: var(--nav-color);
     max-width: auto;
-    font-size: 4vmax;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.guide h2 {
+    font-size: 3vmax;
+    margin-bottom: 10px;
+}
+
+.guide p {
+    font-size: 1.5vmax;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.guide img{
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    transform: scale(.9);
 }
 
 /* Todo-list section styling  */
@@ -226,22 +242,37 @@ section .parent {
     box-shadow: 0 0 0 3px #ff4d4d;
     animation: shake 0.25s;
 }
+
 /* Shake animation */
 @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-4px); }
-    50% { transform: translateX(4px); }
-    75% { transform: translateX(-4px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    75% {
+        transform: translateX(-4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
-:nth-child(2) .child{
+:nth-child(2) .child {
     anchor-name: --info_anchor;
 }
 
 :nth-child(1) .child form textarea {
     width: 100%;
-    height: 350px;
+    height: 300px;
     resize: none;
 }
 
@@ -266,7 +297,8 @@ section .parent {
     cursor: pointer;
     transition: all 0.15s linear;
 }
-:nth-child(2) .child .tasks .btn{
+
+:nth-child(2) .child .tasks .btn {
     position: relative;
     display: flex;
     gap: 10px;
@@ -275,8 +307,8 @@ section .parent {
 .complete-btn,
 .done-btn,
 .info-btn {
-  position: relative;
-  transition: all 0.3s ease-in-out;
+    position: relative;
+    transition: all 0.3s ease-in-out;
 }
 
 .complete-btn:active,
@@ -288,36 +320,38 @@ section .parent {
 .complete-btn span,
 .done-btn span,
 .info-btn span {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: small;
-  color: rgba(255, 255, 255, 0.61);
-  border-radius: 10px;
-  display: none;
-  transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: small;
+    color: rgba(255, 255, 255, 0.61);
+    border-radius: 10px;
+    display: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .complete-btn:hover span,
 .done-btn:hover span,
 .info-btn:hover span {
-  display: inline;
+    display: inline;
 }
 
 .tasks h5.done {
-  text-decoration: line-through;
-  opacity: 0.6;
+    text-decoration: line-through;
+    opacity: 0.6;
 }
 
 
-:nth-child(2) .child .tasks .done-btn:hover i{
+:nth-child(2) .child .tasks .done-btn:hover i {
     color: green;
 }
-:nth-child(2) .child .tasks .complete-btn:hover i{
+
+:nth-child(2) .child .tasks .complete-btn:hover i {
     color: red;
 }
-:nth-child(2) .child .tasks .info-btn:hover i{
+
+:nth-child(2) .child .tasks .info-btn:hover i {
     color: blue;
 }
 
@@ -344,19 +378,21 @@ section .parent {
     font-size: 2vmax;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.15s linear;
-}   
+}
 
-.information-box .info-content{
+.information-box .info-content {
     height: calc(100% - 30px);
     width: calc(100% - 60px);
     overflow-y: auto;
     position: absolute;
     top: 15px;
 }
+
 .information-box .info-content::-webkit-scrollbar {
     display: none;
 }
-.ri-close-line{
+
+.ri-close-line {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -365,7 +401,7 @@ section .parent {
     z-index: 15;
 }
 
-.blur{
+.blur {
     position: fixed;
     top: 0;
     left: 0;
@@ -394,31 +430,34 @@ section .parent {
     justify-content: center;
     align-items: center;
 }
+
 .daily-planner::-webkit-scrollbar {
     display: none;
 }
+
 .daily-planner .daily-planner-time {
     display: flex;
     position: relative;
     flex: 1 1 400px;
 }
-.daily-planner .daily-planner-time p{
+
+.daily-planner .daily-planner-time p {
     top: 0;
     left: 2%;
     position: absolute;
     font-size: 0.9rem;
 }
 
-.daily-planner .daily-planner-time input{
+.daily-planner .daily-planner-time input {
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
     outline: none;
     border: none;
     padding: 15px;
     padding-left: 55px;
-    border-radius: 10px; 
+    border-radius: 10px;
     font-size: 1.2rem;
-    width: 100%; 
+    width: 100%;
 }
 
 
@@ -591,6 +630,13 @@ section .parent {
         margin-bottom: 10px;
     }
 
+    #home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     section .parent {
         position: absolute;
         width: calc(100% - 40px);
@@ -631,7 +677,8 @@ section .parent {
     .child button {
         touch-action: manipulation;
     }
-    .information-box{
+
+    .information-box {
         width: 90vw;
         height: 50vmax;
     }
@@ -641,4 +688,3 @@ section .parent {
         margin-bottom: 10px;
     }
 }
-

@@ -75,12 +75,12 @@ form.addEventListener('submit', function (e) {
   }
 
   // ❌ stop everything if invalid
-  if (hasError){
-    if(navigator.vibrate){
+  if (hasError) {
+    if (navigator.vibrate) {
       navigator.vibrate([100, 50, 100]);
     }
     return;
-  } 
+  }
 
   // ✅ valid data only 
   currentTaskList.push({
@@ -142,7 +142,7 @@ alltasks.addEventListener('click', function (e) {
 
   // DELETE
   if (e.target.closest('.complete-btn')) {
-    if(navigator.vibrate){
+    if (navigator.vibrate) {
       navigator.vibrate(100);
     }
     const btn = e.target.closest('.complete-btn');
@@ -180,8 +180,8 @@ alltasks.addEventListener('click', function (e) {
     infoBox.style.display = 'inline-block';
     document.querySelector('.blur').style.display = 'block';
     // close info box
-    infoBox.querySelector('.ri-close-line').addEventListener('click', function(){
-      if(navigator.vibrate){
+    infoBox.querySelector('.ri-close-line').addEventListener('click', function () {
+      if (navigator.vibrate) {
         navigator.vibrate(100);
       }
       infoBox.style.display = 'none';
@@ -195,13 +195,13 @@ alltasks.addEventListener('click', function (e) {
 
 // Daily planner section 
 
-var dayPlanerData= JSON.parse(localStorage.getItem('dayPlaner')) || {};
-var dayPlaner=document.querySelector('.daily-planner');
+var dayPlanerData = JSON.parse(localStorage.getItem('dayPlaner')) || {};
+var dayPlaner = document.querySelector('.daily-planner');
 
-var hours = Array.from({length:18},(_,idx)=> `${idx+6}:00 - ${idx+7}:00`); // Makes an array
+var hours = Array.from({ length: 18 }, (_, idx) => `${idx + 6}:00 - ${idx + 7}:00`); // Makes an array
 var wholeDaySum = '';
 hours.forEach((elem, index) => {
-  var savedData=dayPlanerData[`hour-${index}`] || '';
+  var savedData = dayPlanerData[`hour-${index}`] || '';
   wholeDaySum += `
     <div class="daily-planner-time">
                     <p>${elem}</p>
@@ -209,15 +209,59 @@ hours.forEach((elem, index) => {
                 </div>
   `;
 });
-dayPlaner.innerHTML=wholeDaySum;
+dayPlaner.innerHTML = wholeDaySum;
 
 // logic to save data in local storage
 
-var inputElements=document.querySelectorAll('.daily-planner-time input');
+var inputElements = document.querySelectorAll('.daily-planner-time input');
 
-inputElements.forEach((inputElem, index)=>{
-  inputElem.addEventListener('input', ()=>{ // Event listener is input as we want to save data as soon as user types and save it without pressing enter
+inputElements.forEach((inputElem, index) => {
+  inputElem.addEventListener('input', () => { // Event listener is input as we want to save data as soon as user types and save it without pressing enter
     dayPlanerData[`hour-${index}`] = inputElem.value;
     localStorage.setItem('dayPlaner', JSON.stringify(dayPlanerData));
   });
 });
+
+// Quote of the day section
+
+const ONE_DAY = 24 * 60 * 60 * 1000;
+
+function shouldFetchNewQuote() {
+  const lastFetchTime = localStorage.getItem("quoteTime");
+  if (!lastFetchTime) return true;
+
+  return Date.now() - lastFetchTime >= ONE_DAY;
+}
+
+async function fetchQuotes() {
+  try {
+    // ✅ call your Vercel serverless function
+    const response = await fetch("/api/quote");
+    const data = await response.json();
+
+    const quote = data[0];
+
+    localStorage.setItem("dailyQuote", JSON.stringify(quote));
+    localStorage.setItem("quoteTime", Date.now());
+
+    displayQuote(quote);
+  } catch (err) {
+    console.error("Failed to fetch quote", err);
+  }
+}
+
+function displayQuote(data) {
+  document.getElementById("quote").innerText = `"${data.quote}"`;
+  document.getElementById("author").innerText = `- ${data.author}`;
+}
+
+// 🚀 FAST ENTRY POINT
+(function initQuote() {
+  const storedQuote = localStorage.getItem("dailyQuote");
+
+  if (storedQuote && !shouldFetchNewQuote()) {
+    displayQuote(JSON.parse(storedQuote));
+  } else {
+    fetchQuotes(); // network only when needed
+  }
+})();
