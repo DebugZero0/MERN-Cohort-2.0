@@ -230,7 +230,7 @@ function shouldFetchNewQuote() {
   const lastFetchTime = localStorage.getItem("quoteTime");
   if (!lastFetchTime) return true;
 
-  return Date.now() - lastFetchTime >= ONE_DAY;
+  return Date.now() - Number(lastFetchTime) >= ONE_DAY;
 }
 
 async function fetchQuotes() {
