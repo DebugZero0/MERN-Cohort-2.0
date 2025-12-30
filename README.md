@@ -153,8 +153,9 @@ This repository will contain **all my assignments, exercises, and projects** fro
 | Tailwind | Crauser | 🔗 [View Live](https://crauser.vercel.app/) | [`./02_Tailwind/Infinite crauser`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/02_Tailwind/Infinite%20crauser) | 15/11/2025 |
 | JavaScript | EyeTracker.js | 🔗 [View Live](https://mern-cohort-2-0.vercel.app/) | [`./03_JavaScript/Eye`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/03_JavaScript/Eye) | 20/11/2025 |
 | JavaScript | Apex Shoes | 🔗 [View Live](https://snazzy-buttercream-57e1f7.netlify.app/) | [`./03_JavaScript/Sneakers`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/03_JavaScript/Sneakers) | 16/12/2025 |
-| Advance JS | Dayflow | 🔗 [View Live](https://mern-cohort-2-0-qx5d.vercel.app/) | [`./04_Advance_JS/Productivity Website`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/04_Advance_JS/Productivity%20Website) | 25/12/2025 |
+| Advance JS | Dayflow | 🔗 [View Live](https://mern-cohort-2-0-qx5d.vercel.app/) | [`./04_Advance_JS/Productivity Website`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/04_Advance_JS/Productivity%20Website) | 31/12/2025 |
 | Advance JS | Weatherwise | 🔗 [View Live](https://mern-cohort-2-0-vi8p.vercel.app/) | [`./04_Advance_JS/Weather DashBoard`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/04_Advance_JS/Weather%20DashBoard) | 13/12/2025 |
+| React JS | Pokemon | 🔗 [View Live](https://snazzy-gumption-414b9a.netlify.app/) | [`./05_React_JS/Project-Pokemon`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/05_React_JS/Project-Pokemon) | 31/12/2025 |
 
 <!-- LIVE_PROJECTS_END -->
 
