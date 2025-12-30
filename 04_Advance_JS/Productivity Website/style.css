@@ -160,7 +160,7 @@ section {
     margin-bottom: 10px;
 }
 
-.guide img{
+.guide img {
     position: absolute;
     right: 3%;
     top: 2%;
@@ -459,6 +459,58 @@ section .parent {
     font-size: 1.2rem;
     width: 100%;
 }
+
+.pomo-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pomo-timer .timer-display {
+    font-size: 5rem;
+    color: var(--nav-color);
+}
+.pomo-timer .timer-controls{
+    display: flex;
+    gap: 20px;
+}
+
+.pomo-timer .timer-controls button {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    background-color: var(--active-color);
+    box-shadow: 4px 4px 0 black;
+    color: var(--nav-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.pomo-timer .timer-controls button:hover {
+    background-color: var(--active-hover-color);
+}
+
+.pomo-timer .timer-controls button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* prevent button text selection */
+
+.pomo-timer .timer-controls button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 
 
 

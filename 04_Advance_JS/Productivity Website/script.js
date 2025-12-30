@@ -264,3 +264,65 @@ function displayQuote(data) {
   }
 })();
 
+// Pomodoro Timer Section
+let timer;
+let isRunning = false;
+let timeLeft = 25 * 60; // 25 minutes in seconds
+let breakTime = 5 * 60; // 5 minutes in seconds
+let tookBreak = false;
+
+const timeDisplay = document.getElementById('time');
+const startButton = document.getElementById('startButton');
+const resetButton = document.getElementById('resetButton');
+const messageDisplay = document.getElementById('message');
+
+startButton.addEventListener('click', () => {
+  if (!isRunning) {
+    startTimer();
+    startButton.textContent = 'Pause';
+  } else {
+    pauseTimer();
+    startButton.textContent = 'Start';
+  }
+  isRunning = !isRunning;
+});
+resetButton.addEventListener('click', resetTimer);
+
+function startTimer() {
+  timer = setInterval(() => {
+    if (timeLeft <= 0) {
+      if (!tookBreak) {
+        timeLeft = breakTime;
+        tookBreak = true;
+        resetTimer();
+        messageDisplay.textContent = "Break time! Relax for 5 minutes.";
+        return;
+      } else {
+        timeLeft = 25 * 60;
+        tookBreak = false;
+        resetTimer();
+        messageDisplay.textContent = "Work session! Focus for 25 minutes.";
+        return;
+      }
+    }
+    timeLeft--;
+    updateDisplay();
+  }
+    , 1);
+}
+function pauseTimer() {
+  clearInterval(timer);
+}
+function resetTimer() {
+  clearInterval(timer);
+  timeLeft = tookBreak ? breakTime : 25 * 60;
+  isRunning = false;
+  startButton.textContent = 'Start';
+  updateDisplay();
+}
+function updateDisplay() {
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
+  timeDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+updateDisplay();
