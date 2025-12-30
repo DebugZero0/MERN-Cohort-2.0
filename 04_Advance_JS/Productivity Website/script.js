@@ -308,7 +308,7 @@ function startTimer() {
     timeLeft--;
     updateDisplay();
   }
-    , 1);
+    , 1000);
 }
 function pauseTimer() {
   clearInterval(timer);
