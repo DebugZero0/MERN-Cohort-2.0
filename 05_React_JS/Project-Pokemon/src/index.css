@@ -84,14 +84,19 @@ input[type="text"] {
   width: 32rem;
   border-bottom: 0.2em solid #020d35;
   background: rgba(#e91e63, 0.2);
-  border-radius: 0.2em 0.2em 0 0;
+  border-radius: 30px;
   padding: 0.8em;
   font-size: 1.6rem;
   color: #000000;
-  -webkit-border-radius: 0.2em 0.2em 0 0;
-  -moz-border-radius: 0.2em 0.2em 0 0;
-  -ms-border-radius: 0.2em 0.2em 0 0;
-  -o-border-radius: 0.2em 0.2em 0 0;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: all 0.3s ease;
+}
+input[type="text"]:focus {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-bottom: 0.2em solid #ff4500;
 }
 
 .cards {
@@ -204,7 +209,7 @@ pokemon-info {
   text-align: center;
 }
 
-/* ///////////////////////////////////////// */
+
 .short-container {
   width: 65rem;
 
