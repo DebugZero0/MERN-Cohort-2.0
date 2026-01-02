@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, use } from "react";
 
 export const PokemonCards = ({
   pokemonData,
@@ -20,7 +20,6 @@ export const PokemonCards = ({
         setOpenCardId(null);
       }
     };
-
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, [setOpenCardId]);
