@@ -165,6 +165,25 @@ input[type="text"]:focus {
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
+.more{
+  position: absolute;
+  z-index: 1;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
+  border-radius: 10px;
+  background-color:#2EC771;
+  padding: 20px;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+.more p{
+  color:#fff;
+  font-size: 1.8rem;
+  margin: 10px;
+}
+
 figure {
   display: flex;
   justify-content: center;

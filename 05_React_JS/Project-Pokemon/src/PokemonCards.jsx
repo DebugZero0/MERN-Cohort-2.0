@@ -1,8 +1,56 @@
+import { useRef, useEffect } from "react";
 
+export const PokemonCards = ({
+  pokemonData,
+  isOpen,
+  setOpenCardId
+}) => {
+  const cardRef = useRef(null);
 
-export const PokemonCards = ({ pokemonData }) => {
+  const toggleDisplay = (e) => {
+    e.stopPropagation();
+    setOpenCardId(prev =>
+      prev === pokemonData.id ? null : pokemonData.id
+    );
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (cardRef.current && !cardRef.current.contains(e.target)) {
+        setOpenCardId(null);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [setOpenCardId]);
+
   return (
-    <li className="pokemon-card">
+    <li
+      className="pokemon-card"
+      ref={cardRef}
+      onClick={toggleDisplay}
+    >
+      {isOpen && (
+        <div className="more" onClick={e => e.stopPropagation()}>
+          <h1>{pokemonData.name}</h1>
+          <p>
+            Moves:{" "}
+            {pokemonData.moves
+              .map(moveInfo => moveInfo.move.name)
+              .slice(0, 3)
+              .join(", ")}
+          </p>
+          <p>
+            Past Abilities:{" "}
+            {pokemonData.abilities
+              .map(abilityInfo => abilityInfo.ability.name)
+              .join(", ")}
+          </p>
+        </div>
+      )}
+
+      
       <figure>
         <img
           src={pokemonData.sprites.other.dream_world.front_default}
@@ -51,3 +99,6 @@ export const PokemonCards = ({ pokemonData }) => {
     </li>
   );
 };
+
+
+
