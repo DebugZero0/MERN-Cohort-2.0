@@ -155,7 +155,8 @@ This repository will contain **all my assignments, exercises, and projects** fro
 | JavaScript | Apex Shoes | 🔗 [View Live](https://snazzy-buttercream-57e1f7.netlify.app/) | [`./03_JavaScript/Sneakers`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/03_JavaScript/Sneakers) | 16/12/2025 |
 | Advance JS | Dayflow | 🔗 [View Live](https://mern-cohort-2-0-qx5d.vercel.app/) | [`./04_Advance_JS/Productivity Website`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/04_Advance_JS/Productivity%20Website) | 31/12/2025 |
 | Advance JS | Weatherwise | 🔗 [View Live](https://mern-cohort-2-0-vi8p.vercel.app/) | [`./04_Advance_JS/Weather DashBoard`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/04_Advance_JS/Weather%20DashBoard) | 13/12/2025 |
-| React JS | Pokemon | 🔗 [View Live](https://snazzy-gumption-414b9a.netlify.app/) | [`./05_React_JS/Project-Pokemon`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/05_React_JS/Project-Pokemon) | 31/12/2025 |
+| React JS | My Market | 🔗 [View Live](https://effortless-zabaione-37559f.netlify.app/) | [`./05_React_JS/Project-Market`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/05_React_JS/Project-Market) | 15/01/2026 |
+| React JS | Pokemon | 🔗 [View Live](https://snazzy-gumption-414b9a.netlify.app/) | [`./05_React_JS/Project-Pokemon`](https://github.com/DebugZero0/MERN-Cohort-2.0/tree/main/05_React_JS/Project-Pokemon) | 15/01/2026 |
 
 <!-- LIVE_PROJECTS_END -->
 
