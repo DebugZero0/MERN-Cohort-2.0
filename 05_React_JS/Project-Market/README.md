@@ -1,5 +1,45 @@
 # React + Vite
 
+[Live Demo](https://effortless-zabaione-37559f.netlify.app/)
+
+## Features
+- React 18
+- Vite
+- React Router DOM
+- ESLint with recommended rules for React
+- Prettier for code formatting
+- CSS Modules support
+- Fast Refresh for a better development experience
+- React Compiler (optional, not enabled by default)
+## Getting Started
+### Prerequisites
+- Node.js v14.18+, v16+
+- npm v6+ or yarn v1.22+
+### Installation
+1. Clone the repository:
+    ```bash
+    git clone
+    git clone
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Project-Market
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+### Running the Development Server
+To start the development server, run:
+```bash
+npm run dev
+# or
+yarn dev
+```
+Open your browser and navigate to `http://localhost:5173` to see the application in action.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
