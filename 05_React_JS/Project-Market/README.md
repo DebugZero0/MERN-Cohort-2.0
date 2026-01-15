@@ -1,6 +1,6 @@
 # My Market
 
-[Live Demo](https://effortless-zabaione-37559f.netlify.app/)
+[Live Demo](https://frolicking-genie-aff01c.netlify.app/)
 
 ## Features
 - React 18
