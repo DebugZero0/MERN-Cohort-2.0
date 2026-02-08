@@ -56,9 +56,3 @@ temp/
 updateReadme.js
 scripts/
 
-.json
-*.json
-*.config.js
-*.config.json
-# config.js
-# config.json
