@@ -17,7 +17,7 @@ const Feed = () => {
     const [isSaving, setIsSaving] = useState(false);
     const [editError, setEditError] = useState('');
     useEffect(() => {
-        axios.get('http://localhost:3000/posts').then((response) => {
+        axios.get('https://image-adder-6q24.onrender.com/posts').then((response) => {
             console.log(response.data);
             setpost(response.data.posts);
         }).catch((error) => {
@@ -26,7 +26,7 @@ const Feed = () => {
     }, []);
 
     const deletePost = (id) => {
-        axios.delete(`http://localhost:3000/posts/${id}`)
+        axios.delete(`https://image-adder-6q24.onrender.com/posts/${id}`)
             .then(response => {
                 console.log('Post deleted:', response.data);
                 setpost(prevPosts => prevPosts.filter(post => post._id !== id));
@@ -63,7 +63,7 @@ const Feed = () => {
         setEditError('');
 
         try {
-            const response = await axios.patch(`http://localhost:3000/posts/${editingId}`, {
+            const response = await axios.patch(`https://image-adder-6q24.onrender.com/posts/${editingId}`, {
                 caption: trimmedCaption,
             });
             setpost(prevPosts => prevPosts.map(item => item._id === editingId ? response.data.post : item));

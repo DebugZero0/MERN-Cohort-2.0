@@ -8,7 +8,7 @@ const CreatePost = () => {
         e.preventDefault();
         // Handle form submission logic here
         const formData = new FormData(e.target);
-        axios.post('http://localhost:3000/create-post', formData)
+        axios.post('https://image-adder-6q24.onrender.com/create-post', formData)
             .then(response => {
                 // console.log(response);
                 navigate('/feed');
